@@ -1,0 +1,76 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+
+html{
+    font-size: 100%;
+    box-sizing: border-box;
+}
+*, *::before, *::after{
+    box-sizing: inherit;
+}
+body{
+    margin: 0;
+    padding: 0;
+    font-family: var(--poppins);
+    font-weight: 400;
+    font-size: 1rem;
+}
+
+@media only screen and (min-width: 45em){
+    body{
+        font-size: 1.125rem;
+    }
+}
+
+:root {
+    --poppins: 'Poppins', sans-serif;
+
+    /* Colors */
+    --brown: #b16112;
+    --dark-brown: #815020;
+
+    --gray-text: #c7c7c7;
+    --light-gray-text: #fdf9f9;
+
+    --gray-bg-light: #DFE0DF;
+    --gray-bg-dark: #E5D3C2;
+
+    --white: #FFFFFF;
+    --red: #F21313;
+}
+
+a, a:visited, a:hover{
+    text-decoration: none;
+}
+h1, h2, h3, h4, h5, h6{
+    margin: 0
+}
+p, a {
+    margin: 0;
+}
+ul{
+    margin: 0;
+    padding: 0;
+}
+li{
+    list-style: none;
+}
+
+@media only screen and (max-width: 44.9375em){
+    .hide__mobile{
+        display: none !important;
+    }
+}
+@media only screen and (min-width: 62em){
+    .hide__desktop{
+        display: none !important;
+    }
+}
+@media only screen and (min-width: 45em){
+    .hide__desktop__tablet{
+        display: none !important;
+    }
+}
+
+.no-scroll{
+    overflow: hidden;
+}
