@@ -1,74 +1,78 @@
 <!DOCTYPE html>
 <html lang="cs">
 <head>
-	<title>Home</title>
+	<title>Úvod | QR Code Site</title>
 
 	<link rel="stylesheet" type="text/css" href="styles/global.css">
+	<link rel="stylesheet" type="text/css" href="styles/header_footer.css">
 	<link rel="stylesheet" type="text/css" href="styles/main.css">
 
 
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="author" content="ttoomas">
-	<meta name="description" content="Qr code website. Qr code generator with https://qrd.by api.">
+	<meta name="description" content="Qr code website. Qr code generator using https://qrd.by api. Design and code by author">
 </head>
 <body>
 
 <!-- Header -->
-	<header class="header">
-		<nav class="header__menu">
-			<div class="header__left">
-				<a href="#" class="header__logo__bx">
-					<img src="assets/logo-qr-github.webp" alt="Qr code logo with author github" class="header__logo">
-				</a>
-				<ul class="header__langu hide__mobile">
-					<li class="langu__bx"><a href="#" class="langu__link">Česky</a></li>
-					<li class="langu__bx"><a href="#" class="langu__link">English</a></li>
-				</ul>
-			</div>
-			<ul class="menu__bx hide__mobile">
-				<li class="link__bx"><a href="#" class="menu__link">Home</a></li>
-				<li class="link__bx"><a href="#" class="menu__link">History</a></li>
-				<li class="link__bx"><a href="#" class="menu__link">About</a></li>
+<header class="header">
+	<nav class="header__menu">
+		<div class="header__left">
+			<a href="https://github.com/ttoomas" class="header__logo__bx">
+				<img src="assets/logo-qr-github.webp" alt="QR Kód s githubem" class="header__logo">
+			</a>
+			<ul class="header__langu hide__mobile">
+				<li class="langu__bx active-langu"><a href="#" class="langu__link">Česky</a></li>
+				<li class="langu__bx"><a href="./en-version/en-home.html" class="langu__link">English</a></li>
 			</ul>
-			<div class="header__hamburger hide__desktop__tablet">
-				<span></span>
-				<span></span>
-				<span></span>
-			</div>
-		</nav>
-		<ul class="hmg__bx fade-ani-ham hide__desktop__tablet">
-			<li class="link__hmg__bx"><a href="#" class="hmg__link">Home</a></li>
-			<li class="link__hmg__bx"><a href="#" class="hmg__link">History</a></li>
-			<li class="link__hmg__bx"><a href="#" class="hmg__link">About</a></li>
-
-			<li class="link__hmg__bx"><a href="#" class="hmg__link">Česky</a></li>
-			<li class="link__hmg__bx"><a href="#" class="hmg__link">English</a></li>
+		</div>
+		<ul class="menu__bx hide__mobile">
+			<li class="link__bx active-link"><a href="#" class="menu__link">Úvod</a></li>
+			<li class="link__bx"><a href="./co-je-qr.html" class="menu__link">Co je QR Kód</a></li>
+			<li class="link__bx"><a href="./historie.html" class="menu__link">Historie</a></li>
+			<li class="link__bx"><a href="./zajimavosti.html" class="menu__link">Zajímavosti</a></li>
 		</ul>
-	</header>
+		<div class="header__hamburger hide__desktop__tablet">
+			<span></span>
+			<span></span>
+			<span></span>
+		</div>
+	</nav>
+	<ul class="hmg__bx fade-ani-ham hide__desktop__tablet">
+		<li class="link__hmg__bx active-link"><a href="#" class="hmg__link">Úvod</a></li>
+		<li class="link__hmg__bx"><a href="./co-je-qr.html" class="hmg__link">Co je QR Kód</a></li>
+		<li class="link__hmg__bx"><a href="./historie.html" class="hmg__link">Historie</a></li>
+		<li class="link__hmg__bx"><a href="./zajimavosti.html" class="hmg__link">Zajímavosti</a></li>
+
+		<li class="link__hmg__bx active-langu"><a href="#" class="hmg__link">Česky</a></li>
+		<li class="link__hmg__bx"><a href="#" class="hmg__link">English</a></li>
+	</ul>
+</header>
 
 <!-- Footer -->
 <footer class="footer">
-	<a href="#" class="footer__logoBx hide__mobile">
-		<img src="assets/logo-qr-github.webp" alt="Qr code logo with author github" class="footer__logo">
+	<a href="https://github.com/ttoomas" class="footer__logoBx hide__mobile">
+		<img src="assets/logo-qr-github.webp" alt="QR Kód s githubem" class="footer__logo">
 	</a>
 	<div class="footer__links">
 		<p class="footer__title">Pages</p>
-		<a href="#" class="footer__link">Home</a>
-		<a href="#" class="footer__link">History</a>
-		<a href="#" class="footer__link">About</a>
+		<a href="#" class="footer__link">Úvod</a>
+		<a href="./co-je-qr.html" class="footer__link">Co je QR Kód</a>
+		<a href="./historie.html" class="footer__link">Historie</a>
+		<a href="./zajimavosti.html" class="footer__link">Zajímavosti</a>
 	</div>
 	<div class="footer__langu">
 		<p class="footer__title">Languages</p>
 		<a href="#" class="footer__link">Česky</a>
-		<a href="#" class="footer__link">English</a>
+		<a href="./en-version/en-home.html" class="footer__link">English</a>
 	</div>
 	<div class="footer__icons">
-		<a href="#" class="footer__iconBx">
-			<img src="assets/footer/github.png" alt="" aria-hidden="true">
+		<a href="https://github.com/ttoomas" class="footer__iconBx">
+			<img src="assets/footer/github-icon.png" alt="" aria-hidden="true">
 		</a>
-		<a href="#" class="footer__iconBx">
-			<img src="assets/footer/twitter
+		<a href="https://twitter.com/ttoomas_" class="footer__iconBx">
+			<img src="assets/footer/twitter-icon
 			.png" alt="" aria-hidden="true">
 		</a>
 	</div>
