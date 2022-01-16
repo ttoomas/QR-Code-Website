@@ -10,7 +10,7 @@ html{
 body{
     margin: 0;
     padding: 0;
-    font-family: var(--poppins);
+    font-family: 'Poppins', sans-serif;
     font-weight: 400;
     font-size: 1rem;
 }
@@ -22,9 +22,6 @@ body{
 }
 
 :root {
-    --poppins: 'Poppins', sans-serif;
-
-    /* Colors */
     --brown: #b16112;
     --dark-brown: #815020;
 
@@ -35,6 +32,7 @@ body{
     --gray-bg-dark: #E5D3C2;
 
     --white: #FFFFFF;
+    --black: #1e0f00;
     --red: #F21313;
 }
 
