@@ -89,14 +89,13 @@
 .link__hmg__bx:not(:last-child){
 	margin-bottom: 1rem;
 }
-.link__hmg__bx:nth-child(4)::before{
+.link__hmg__bx:nth-child(5)::before{
 	content: '';
 	display: block;
 	width: 85%;
-	height: 2.5px;
-	margin: 0 auto;
-	background-color: var(--light-gray-text);
-	margin-bottom: 1rem;
+	height: 1.5px;
+	margin: 0.25rem auto 1.25rem auto;
+	background-color: var(--light-gray-text);	
 	border-radius: 0.625rem;
 }
 .hmg__link{
