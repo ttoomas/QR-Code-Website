@@ -139,8 +139,28 @@
     }
 }
 
+/* Fix of width menu - Between mobile and tablet */
+@media only screen and (min-width: 50.5em){
+	.hmg__bx{
+		display: none;
+	}
+	.header__hamburger{
+		display: none;
+	}
+}
+@media only screen and (max-width: 50.4375em){
+	.menu__bx{
+		display: none !important;
+	}
+}
+@media only screen and (max-width: 29.9375em){
+	.header__langu{
+		display: none;
+	}
+}
+
 /* Tablet Header */
-@media only screen and (min-width: 45em){
+@media only screen and (min-width: 30em){
 	.header{
 		padding: 1rem 5rem 1.5rem 4rem;
 	}
@@ -197,6 +217,9 @@
 	}
 	.menu__link:hover::after{
 		width: 100%;
+	}
+	.link__hmg__bx:nth-child(n+5){
+		display: none;
 	}
 }
 
