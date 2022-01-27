@@ -25,10 +25,11 @@ body{
     --brown: #b16112;
     --dark-brown: #815020;
 
+    --gray: #767676;
     --gray-text: #c7c7c7;
     --light-gray-text: #fdf9f9;
 
-    --gray-bg-light: #DFE0DF;
+    --gray-bg: #F0F1F6;
     --gray-bg-dark: #E5D3C2;
 
     --white: #FFFFFF;
@@ -42,12 +43,17 @@ a, a:visited, a:hover{
 h1, h2, h3, h4, h5, h6{
     margin: 0
 }
-p, a {
+p{
     margin: 0;
 }
-ul{
+ul, input, button{
     margin: 0;
     padding: 0;
+}
+input, button{
+    outline: 0;
+    border: 0;
+    background: unset;
 }
 li{
     list-style: none;

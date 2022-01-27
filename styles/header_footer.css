@@ -240,6 +240,10 @@
 }
 
 /* FOOTER */
+.footer__logoBx{
+	display: flex;
+	place-self: flex-start;
+}
 
 /* Mobile Footer */
 @media only screen and (max-width: 29.9375em){
