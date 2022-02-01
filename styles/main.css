@@ -137,6 +137,7 @@
 	display: flex;
 	flex-direction: column;
 	align-items: center;
+	position: relative;
 }
 .qr__input{
 	width: 100%;
@@ -177,6 +178,16 @@
 .qr__button:hover::before{
 	opacity: 0.3;
 }
+.qr__error{
+	position: absolute;
+	top: 4.625rem;
+	left: 1.875rem;
+	/*display: none;*/
+	color: var(--red);
+}
+/*.qr__inputBx.error-active .qr__error{
+	display: block;
+}*/
 
 @media only screen and (min-width: 50.5em){
 	.qr{
@@ -197,6 +208,9 @@
 		padding: 1.125rem 1.625rem;
 		margin-left: 1.5rem;
 	}
+	.qr__error{
+		top: 4.375rem;
+	}
 }
 
 @media only screen and (min-width: 76em){
@@ -210,7 +224,7 @@
 
 /* Qr code output */
 .qr__output{
-	padding: 2rem 0 2rem 0;
+	padding: 2.8125rem 0 2rem 0;
 }
 .qr__output::before{
 	content: '';
