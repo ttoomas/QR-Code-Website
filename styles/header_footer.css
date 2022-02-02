@@ -357,7 +357,7 @@
 		filter: brightness(0.85);
 	}
 	.footer__link{
-		transition: opacity 150ms ease-in-out;
+		transition: opacity 125ms ease-in-out;
 	}
 	.footer__link:hover{
 		opacity: 1;

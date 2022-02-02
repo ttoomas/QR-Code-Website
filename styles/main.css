@@ -1,5 +1,5 @@
-.footer{
-	margin-top: 100rem;
+html {
+	scroll-behavior: smooth;
 }
 
 /* Main Section */
@@ -178,16 +178,32 @@
 .qr__button:hover::before{
 	opacity: 0.3;
 }
+
+/* Input link errors */
 .qr__error{
 	position: absolute;
 	top: 4.625rem;
 	left: 1.875rem;
-	/*display: none;*/
+	display: none;
 	color: var(--red);
 }
-/*.qr__inputBx.error-active .qr__error{
+.qr__inputBx.error-active .qr__error{
 	display: block;
-}*/
+}
+
+@media only screen and (min-width: 19.75em) and (max-width: 50.4375em){
+	.qr__inputBx.error-active .qr__button {
+		margin-top: 1.875rem;
+	}
+}
+@media only screen and (max-width: 19.6875em){
+	.qr__error{
+		font-size: 0.875rem;
+	}
+	.qr__inputBx.error-active .qr__button {
+		margin-top: 3rem;
+	}
+}
 
 @media only screen and (min-width: 50.5em){
 	.qr{
@@ -215,7 +231,7 @@
 
 @media only screen and (min-width: 76em){
 	.qr{
-		padding: 3.5rem 6rem;
+		padding: 3.5rem 8rem;
 	}
 	.qr__button{
 		padding: 1.125rem 2.75rem;
@@ -369,8 +385,8 @@
 		padding: 2rem 1.5rem;
 		margin-bottom: 0 !important;
 	}
-	.qr__img{
-		width: unset;
+	.qr__img {
+		width: 7.8125rem;
 	}
 	.item__shortBx{
 		margin-bottom: 0.75rem;
