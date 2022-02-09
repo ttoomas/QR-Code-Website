@@ -2,8 +2,6 @@
 const typedText = document.querySelector('.type__text');
 const typedCursor = document.querySelector('.type__cursor');
 
-const textArray = ["Generátor", "Historii", "Zajímavosti", "Informace"];
-
 const typingDelay = 170;	// Time of writing text
 const erasingDelay = 70;	// Time of deleting text
 const newTextDelay = 2000;	// Delay between current and next text
@@ -96,52 +94,49 @@ function entered(){
         .then(data => linkInfo(data))
     }
     else{
-        qrCodeEntered();
+        const apiQrInfo = `
+            <div class="qr__item">
+                <div class="item__imgBx">
+                    <img src="${imgUrl}" alt="${qrCodeAlt} ${inputData}" class="qr__img">
+                </div>
+                <div class="item__info">
+                    <p class="link__original">${inputData}</p>
+                    <p class="item__date">${dateTime}</p>
+                    <a href="${imgUrl}" class="item__download" download>${qrCodeDownload}</a>
+                </div>
+            </div>
+        `
+
+        qrCodeEntered(apiQrInfo);
     }
 
     // Enter information into code and put it to website
     function linkInfo(data){
         // console.log(data);
 
-        if(data.ok == true){
+        if(data.ok === true){
             let shortLink = data.result.short_link;
             let originalLink = data.result.original_link;
             // console.log(shortLink)
 
-            const apiLinkInfo = `
+            const apiQrInfo = `
                 <div class="qr__item">
                     <div class="item__imgBx">
-                        <img src="${imgUrl}" alt="QR Code of ${inputData}" class="qr__img">
+                            <img src="${imgUrl}" alt="${qrCodeAlt} ${inputData}" class="qr__img">
                     </div>
                     <div class="item__info">
                         <a href="${originalLink}" class="link__original">${inputData}</a>
                         <p class="item__date">${dateTime}</p>
-                        <p class="item__shortBx">Krátký odkaz: <a href="https://${shortLink}" class="item__short">${shortLink}</a></p>
-                        <a href="${imgUrl}" class="item__download" download>Stáhnout</a>
+                        <p class="item__shortBx">${qrCodeLinkText}: <a href="https://${shortLink}" class="item__short">${shortLink}</a></p>
+                        <a href="${imgUrl}" class="item__download" download>${qrCodeDownload}</a>
                     </div>
                 </div>
             `;
 
-            qrOutput.insertAdjacentHTML('afterbegin', apiLinkInfo);
-
-            // LocalStorage set items
-            localStorage.setItem(`${inputData}`, apiLinkInfo);
+            qrCodeEntered(apiQrInfo);
         }
     }
-    function qrCodeEntered(){
-        const apiQrInfo = `
-            <div class="qr__item">
-                <div class="item__imgBx">
-                    <img src="${imgUrl}" alt="QR Code of ${inputData}" class="qr__img">
-                </div>
-                <div class="item__info">
-                    <p class="link__original">${inputData}</p>
-                    <p class="item__date">${dateTime}</p>
-                    <a href="${imgUrl}" class="item__download" download>Stáhnout</a>
-                </div>
-            </div>
-        `
-
+    function qrCodeEntered(apiQrInfo){
         qrOutput.insertAdjacentHTML('afterbegin', apiQrInfo);
 
         // LocalStorage set items

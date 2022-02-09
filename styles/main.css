@@ -316,9 +316,13 @@ html {
 .item__short:hover{
 	opacity: 1;
 }
+.link__buttonBx{
+	display: flex;
+	flex-direction: column;
+}
 .item__download{
 	position: relative;
-	background-color: var(--black);
+	width: 100%;
 	color: var(--white);
 	padding: 0.875rem 1.75rem;
 	border-radius: 1rem;
@@ -344,6 +348,19 @@ html {
 .item__download:hover::before{
 	opacity: 0.3;
 }
+.btn__black{
+	background-color: var(--black);
+}
+.btn__red{
+	background-color: var(--red);
+}
+
+@media only screen and (min-width: 30em){
+	.link__buttonBx{
+		flex-direction: row;
+		grid-column-gap: 0.75rem;
+	}
+}
 
 @media only screen and (min-width: 50.5em){
 	.qr__item{
@@ -368,6 +385,12 @@ html {
 		align-self: flex-end;
 		margin-top: 0.625rem;
 		padding: 1rem 1.875rem;
+	}
+	.btn__black{
+		order: 2;
+	}
+	.btn__red{
+		order: 1;
 	}
 }
 
