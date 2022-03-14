@@ -244,6 +244,9 @@
 	display: flex;
 	place-self: flex-start;
 }
+.footer{
+	margin-top: auto;
+}
 
 /* Mobile Footer */
 @media only screen and (max-width: 29.9375em){

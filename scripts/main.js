@@ -95,14 +95,17 @@ function entered(){
     }
     else{
         const apiQrInfo = `
-            <div class="qr__item">
+            <div class="qr__item ${inputData}">
                 <div class="item__imgBx">
                     <img src="${imgUrl}" alt="${qrCodeAlt} ${inputData}" class="qr__img">
                 </div>
                 <div class="item__info">
                     <p class="link__original">${inputData}</p>
                     <p class="item__date">${dateTime}</p>
-                    <a href="${imgUrl}" class="item__download" download>${qrCodeDownload}</a>
+                    <div class="link__buttonBx">
+                        <a href="${imgUrl}" class="item__download btn__black" download>Stáhnout</a>
+                        <a onclick="localStorage.removeItem('${inputData}'); const current${inputData} = document.querySelector('.qr__item.${inputData}'); current${inputData}.remove(); " class="item__download btn__red">Smazat</a>
+                    </div>
                 </div>
             </div>
         `
@@ -116,11 +119,14 @@ function entered(){
 
         if(data.ok === true){
             let shortLink = data.result.short_link;
+            let shortCode = data.result.code;
             let originalLink = data.result.original_link;
-            // console.log(shortLink)
+
+            // console.log(shortLink);
+            // console.log(shortCode);
 
             const apiQrInfo = `
-                <div class="qr__item">
+                <div class="qr__item ${shortCode}">
                     <div class="item__imgBx">
                             <img src="${imgUrl}" alt="${qrCodeAlt} ${inputData}" class="qr__img">
                     </div>
@@ -128,7 +134,10 @@ function entered(){
                         <a href="${originalLink}" class="link__original">${inputData}</a>
                         <p class="item__date">${dateTime}</p>
                         <p class="item__shortBx">${qrCodeLinkText}: <a href="https://${shortLink}" class="item__short">${shortLink}</a></p>
-                        <a href="${imgUrl}" class="item__download" download>${qrCodeDownload}</a>
+                        <div class="link__buttonBx">
+					        <a href="${imgUrl}" class="item__download btn__black" download>Stáhnout</a>
+					        <a onclick="localStorage.removeItem('${inputData}'); const current${shortCode} = document.querySelector('.qr__item.${shortCode}'); current${shortCode}.remove(); " class="item__download btn__red">Smazat</a>
+				        </div>
                     </div>
                 </div>
             `;
